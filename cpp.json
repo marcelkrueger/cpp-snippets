@@ -1,0 +1,183 @@
+{
+   "spi": {
+    "prefix": "spi",
+    "body": "spdlog::info(\"$1\",$2)"
+   },
+
+  "sw": {
+    "prefix": "spsw",
+    "body": "spdlog::stopwatch $1;"
+  },
+
+  "spsw": {
+    "prefix": "spisw",
+    "body": "spdlog::info(\"{}\",$1.elapsed());"
+  },
+
+  "array": {
+    "prefix": "array",
+    "body": [
+      "std::array<${1:T}, ${2:N}> ${3};"
+    ],
+    "description": "Code snippet for array"
+  },
+
+  "vector": {
+    "prefix": "vector",
+    "body": [
+      "std::vector<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for vector"
+  },
+
+  "deque": {
+    "prefix": "deque",
+    "body": [
+      "std::deque<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for deque"
+  },
+
+
+  "flist": {
+    "prefix": "flist",
+    "body": [
+      "std::forward_list<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for flist"
+  },
+
+
+  "list": {
+    "prefix": "list",
+    "body": [
+      "std::list<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for list"
+  },
+
+  "set": {
+    "prefix": "set",
+    "body": [
+      "std::set<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for set"
+  },
+
+  "map": {
+    "prefix": "map",
+    "body": [
+      "std::map<${1:T}, ${2:T}> ${3};"
+    ],
+    "description": "Code snippet for map"
+  },
+
+  "multiset": {
+    "prefix": "mset",
+    "body": [
+      "std::multiset<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for multiset"
+  },
+
+  "multimap": {
+    "prefix": "mmap",
+    "body": [
+      "std::multimap<${1:T},${2:T}> ${3};"
+    ],
+    "description": "Code snippet for multimap"
+  },
+  
+  "unordered set": {
+    "prefix": "uset",
+    "body": [
+      "std::unordered_set<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for unordered set"
+  },
+
+  "unordered map": {
+    "prefix": "umap",
+    "body": [
+      "std::unordered_map<${1:T}, ${2:T}> ${3};"
+    ],
+    "description": "Code snippet for unordered map"
+  },
+
+  "unordered multiset": {
+    "prefix": "umset",
+    "body": [
+      "std::unordered_multiset<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for unordered multiset"
+  },
+
+  "unordered multimap": {
+    "prefix": "ummap",
+    "body": [
+      "std::unordered_multimap<${1:T},${2:T}> ${3};"
+    ],
+    "description": "Code snippet for unordered multimap"
+  },
+
+  "stack": {
+    "prefix": "stack",
+    "body": [
+      "std::stack<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for stack"
+  },
+
+  "queue": {
+    "prefix": "queue",
+    "body": [
+      "std::queue<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for queue"
+  },
+
+  "pqueue": {
+    "prefix": "pqueue",
+    "body": [
+      "std::priority_queue<${1:T}> ${2};"
+    ],
+    "description": "Code snippet for priority_queue"
+  },
+
+
+  "lambda": {
+    "prefix": "lambda",
+    "body": [
+      "[${1}](${2}){${3}};"
+    ],
+    "description": "Code snippet for single line lambda"
+  },
+
+  "lambda_multi": {
+    "prefix": "lambda_multi",
+    "body": [
+      "[${1}](${2}){",
+        "${3}",
+      "};"
+    ],
+    "description": "Code snippet for multi line lambda"
+  },
+
+  "func": {
+    "prefix": "func",
+    "body": [
+      "${1:void} ${2:func_name} (${3}){",
+        "${4}",
+      "};$5"
+    ],
+    "description": "Code snippet for functions"
+  },
+
+  "dmfun0": {
+      "prefix": "dmfun0",
+      "body": [
+        "${3:void} ${1:$TM_FILENAME_BASE}::${2:memberFunction}() {${0}}"
+      ],
+      "description": "Code snippet for 'for' loop"
+    }
+}
